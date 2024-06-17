@@ -23,7 +23,7 @@ const Navbar = (props: Props) => {
             </Link>
           </li>
           <li>
-            <Link href="#" legacyBehavior>
+            <Link href="dataset" legacyBehavior>
               <a>Resources</a>
             </Link>
           </li>

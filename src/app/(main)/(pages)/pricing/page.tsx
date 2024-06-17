@@ -19,7 +19,7 @@ export default function Home() {
                   className="text-xl font-bold text-neutral-600 dark:text-white"
                 >
                   Software Optimization
-                  <h2 className="text-6xl">$150</h2>
+                  <h2 className="text-6xl">$500</h2>
                 </CardItem>
                 <CardItem
                   translateZ="60"
@@ -64,24 +64,23 @@ export default function Home() {
                   translateZ="50"
                   className="text-xl font-bold text-neutral-600 dark:text-white"
                 >
-                  Hardware Optimization
+                  Business Support
                   <h2 className="text-6xl">$300</h2>
                 </CardItem>
                 <CardItem
                   translateZ="60"
                   className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
                 >
-                  Upgrade your hardware infrastructure with our optimization solutions
-                  designed to enhance performance and reliability.
+                   Empower your business with our comprehensive support solutions designed to improve efficiency and productivity.
                   <ul className="my-4 flex flex-col gap-2">
                     <li className="flex items-center gap-2">
-                      <CheckIcon /> Hardware assessment and analysis
+                      <CheckIcon /> Professional consulting and strategy planning
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckIcon /> Custom hardware upgrade recommendations
+                      <CheckIcon /> Customized business process optimization
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckIcon /> Implementation support and maintenance
+                      <CheckIcon /> Continuous support and performance monitoring
                     </li>
                   </ul>
                 </CardItem>
@@ -111,7 +110,7 @@ export default function Home() {
                   className="text-xl font-bold text-neutral-600 dark:text-white"
                 >
                   Robotics Automation
-                  <h2 className="text-6xl">$X</h2>
+                  <h2 className="text-6xl">$3000</h2>
                 </CardItem>
                 <CardItem
                   translateZ="60"
