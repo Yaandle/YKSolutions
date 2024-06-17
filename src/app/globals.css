@@ -68,10 +68,11 @@
 }
 
 @layer base {
-  * {
-    @apply border-border;
+  :root {
+    @apply border-none; /* Apply a consistent border style to all elements */
   }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-black text-white dark:bg-white dark:text-black; /* Use standard Tailwind utilities */
   }
 }

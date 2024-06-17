@@ -7,8 +7,8 @@ import Navbar from '@/components/global/navbar';
 import { FlipWords } from "../components/ui/flip-words";
 
 const Page = () => {
-    const words = ["Software", "Hardware", "Robotics", "Business"];
-    const colors = ['text-blue-500', 'text-green-500', 'text-purple-500', 'text-yellow-500'];
+    const words = ["Software", "Hardware", "Workflow", "Business", "Technology"];
+    const colors = ['text-blue-500', 'text-green-500', 'text-purple-500', 'text-yellow-500','text-red-500'];
     
     return (
         <main className="flex min-h-screen flex-col items-center justify-between p-24">
