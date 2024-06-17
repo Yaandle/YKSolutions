@@ -7,7 +7,7 @@ import Navbar from '@/components/global/navbar';
 import { FlipWords } from "../components/ui/flip-words";
 
 const Page = () => {
-    const words = ["Software", "Hardware", "Robotics", "Businesses"];
+    const words = ["Software", "Hardware", "Robotics", "Business"];
     const colors = ['text-blue-500', 'text-green-500', 'text-purple-500', 'text-yellow-500'];
     
     return (
