@@ -21,7 +21,7 @@ const Page = () => {
                     <div className="h-[40rem] flex justify-center items-center px-4">
                         <div className="text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-400">
                             Automate Your{" "}
-                            <FlipWords words={words} colors={colors} duration={3000} />{" "}
+                            <FlipWords words={words} colors={colors} duration={2000} />{" "}
                             <br />
                             with YK Solutions
                         </div>
