@@ -9,15 +9,15 @@ const ServicesPage = () => {
       <section className="mb-12">
         <h2 className="text-3xl font-semibold mb-4">Robotic Automation</h2>
         <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="bg-black p-6 rounded-lg shadow-md">
             <h3 className="text-xl font-semibold mb-2">Advanced Robots</h3>
             <p>Our robotic automation solutions feature advanced, industry-leading robots designed to automate a wide range of industrial processes with precision and efficiency.</p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="bg-black p-6 rounded-lg shadow-md">
             <h3 className="text-xl font-semibold mb-2">Flexible Integration</h3>
             <p>These robots are highly flexible and easy to integrate into your existing operations, ensuring a seamless transition and maximum impact on your productivity.</p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="bg-black p-6 rounded-lg shadow-md">
             <h3 className="text-xl font-semibold mb-2">Leasing or Purchasing</h3>
             <p>Businesses have the option to either lease or purchase our robotic automation solutions, allowing for flexibility in deployment and capital investment.</p>
           </div>
@@ -27,15 +27,15 @@ const ServicesPage = () => {
       <section className="mb-12">
         <h2 className="text-3xl font-semibold mb-4">Software Automation</h2>
         <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="bg-black p-6 rounded-lg shadow-md">
             <h3 className="text-xl font-semibold mb-2">Comprehensive Review</h3>
             <p>Our team of experts will conduct a thorough review of your existing business software, identifying areas for improvement and optimization.</p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="bg-black p-6 rounded-lg shadow-md">
             <h3 className="text-xl font-semibold mb-2">Custom Development</h3>
             <p>We will develop custom software solutions tailored to your unique needs, ensuring seamless integration with your operations and maximizing efficiency.</p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="bg-black p-6 rounded-lg shadow-md">
             <h3 className="text-xl font-semibold mb-2">Integrated Approach</h3>
             <p>By combining our software automation expertise with our robotic automation solutions, we provide a comprehensive and integrated approach to streamlining your workflows.</p>
           </div>
@@ -62,15 +62,15 @@ const ServicesPage = () => {
       <section>
         <h2 className="text-3xl font-semibold mb-4">Benefits of Automation</h2>
         <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="bg-black p-6 rounded-lg shadow-md">
             <h3 className="text-xl font-semibold mb-2">Save Time</h3>
             <p>Our automation solutions streamline repetitive tasks, freeing up your employees to focus on more strategic and value-added activities.</p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="bg-black p-6 rounded-lg shadow-md">
             <h3 className="text-xl font-semibold mb-2">Reduce Costs</h3>
             <p>By enhancing operational efficiency and minimizing errors, our solutions help you achieve significant cost savings for your business.</p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="bg-black p-6 rounded-lg shadow-md">
             <h3 className="text-xl font-semibold mb-2">Increase Productivity</h3>
             <p>With improved workflows and increased accuracy, your team can accomplish more in less time, boosting overall productivity and performance.</p>
           </div>
