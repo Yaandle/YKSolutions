@@ -15,7 +15,7 @@ interface ModelSelectorProps {
         <select 
           value={selectedModel} 
           onChange={(e) => setSelectedModel(e.target.value)}
-          className="mb-2 p-2 border rounded"
+          className="mb-2 text-black p-2 border rounded"
         >
           {models.map(model => (
             <option key={model} value={model}>{model}</option>
@@ -27,7 +27,7 @@ interface ModelSelectorProps {
         <select 
           value={selectedTask} 
           onChange={(e) => setSelectedTask(e.target.value)}
-          className="mb-2 p-2 border rounded"
+          className="mb-2 text-black p-2 border rounded"
         >
           {tasks.map(task => (
             <option key={task} value={task}>{task}</option>

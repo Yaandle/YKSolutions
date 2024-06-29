@@ -8,7 +8,7 @@ import { FlipWords } from "../components/ui/flip-words";
 import { BackgroundBeams } from "../components/ui/background-beams"; // Import BackgroundBeams directly
 
 const Page = () => {
-    const words = ["Software", "Agency", "Workflow", "Business", "Technology"];
+    const words = ["Software", "Agency", "Workflow", "Business", "Manufacturing",];
     const colors = ['text-blue-500', 'text-green-500', 'text-purple-500', 'text-yellow-500','text-red-500'];
     
     return (

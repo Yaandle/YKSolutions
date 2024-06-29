@@ -75,4 +75,46 @@
   body {
     @apply bg-black text-white dark:bg-white dark:text-black; /* Use standard Tailwind utilities */
   }
+
+  .header {
+    text-align: center;
+    margin-top: 60px; /* Adjust as needed to avoid overlap with navbar */
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    z-index: 1000;
+  }
+
+  .select-dropdown {
+    color: black; /* Ensure dropdown text is black */
+  }
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .flex-col {
+    flex-direction: column;
+  }
+
+  .items-center {
+    align-items: center;
+  }
+
+  .space-y-4 > * + * {
+    margin-top: 1rem;
+  }
 }
