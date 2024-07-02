@@ -1,5 +1,3 @@
-// src/app/(main)/(pages)/MFIT/page.tsx
-
 "use client";
 
 import React, { useState } from 'react';
@@ -14,32 +12,34 @@ import { HeroHighlight, Highlight } from '@/components/ui/hero-highlight';
 const App = () => {
   const [selectedModel, setSelectedModel] = useState('Strawberry');
   const [selectedTask, setSelectedTask] = useState('Detection');
-  const [originalImage, setOriginalImage] = useState<string | null>(null);
-  const [processedImage, setProcessedImage] = useState<string | null>(null);
-  const [imageFile, setImageFile] = useState<File | null>(null);
+  const [originalImages, setOriginalImages] = useState<string[]>([]);
+  const [processedImages, setProcessedImages] = useState<string[]>([]);
+  const [imageFiles, setImageFiles] = useState<File[]>([]);
   const [processing, setProcessing] = useState<boolean>(false);
 
-  const handleImageUpload = (file: File) => {
-    const imageUrl = URL.createObjectURL(file);
-    setOriginalImage(imageUrl);
-    setImageFile(file);
-    setProcessedImage(null);
+  const handleImageUpload = (files: File[]) => {
+    const imageUrls = files.map(file => URL.createObjectURL(file));
+    setOriginalImages(imageUrls);
+    setImageFiles(files);
+    setProcessedImages([]);
   };
 
-  const handleProcessImage = async () => {
-    if (imageFile) {
+  const handleProcessImages = async () => {
+    if (imageFiles.length > 0) {
       try {
         setProcessing(true);
-        const processedImageUrl = await processImage(imageFile, selectedModel, selectedTask);
-        setProcessedImage(processedImageUrl);
-        console.log('Image processed successfully');
+        const processedImageUrls = await Promise.all(
+          imageFiles.map(file => processImage(file, selectedModel, selectedTask))
+        );
+        setProcessedImages(processedImageUrls);
+        console.log('Images processed successfully');
       } catch (error) {
-        console.error('Error processing image:', error);
+        console.error('Error processing images:', error);
       } finally {
         setProcessing(false);
       }
     } else {
-      console.error('No image file selected');
+      console.error('No image files selected');
     }
   };
 
@@ -52,7 +52,7 @@ const App = () => {
             <Highlight>Image Processing App</Highlight>
           </h1>
           <p className="text-xl text-gray-200 mb-8">
-            Upload an image and process it using our advanced AI models
+            Upload images and process them using our advanced AI models
           </p>
         </div>
       </HeroHighlight>
@@ -68,15 +68,15 @@ const App = () => {
               />
               <ImageUpload onImageUpload={handleImageUpload} />
               <Button 
-                onClick={handleProcessImage} 
-                disabled={processing || !imageFile} 
-                className="w-full mt-4"
+                onClick={handleProcessImages} 
+                disabled={processing || imageFiles.length === 0} 
+                className="w-full text-black mt-4"
               >
-                {processing ? 'Processing...' : 'Process Image'}
+                {processing ? 'Processing...' : 'Process Images'}
               </Button>
             </div>
             <div className="w-full md:w-2/3 mt-8 md:mt-0">
-              <ImageDisplay originalImage={originalImage} processedImage={processedImage} />
+              <ImageDisplay originalImages={originalImages} processedImages={processedImages} />
             </div>
           </div>
         </div>

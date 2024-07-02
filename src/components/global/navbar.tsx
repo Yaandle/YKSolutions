@@ -13,8 +13,8 @@ const Navbar = (props: Props) => {
       <nav className="absolute left-[50%] top-[50%] transform translate-x-[-50%] translate-y-[-50%] hidden md:block">
         <ul className="flex items-center gap-4 list-none">
           <li>
-            <Link href="#" legacyBehavior>
-              <a>Products</a>
+            <Link href="services" legacyBehavior>
+              <a>Services</a>
             </Link>
           </li>
           <li>
@@ -25,6 +25,11 @@ const Navbar = (props: Props) => {
           <li>
             <Link href="dataset" legacyBehavior>
               <a>Resources</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="MFIT" legacyBehavior>
+              <a>MFIT</a>
             </Link>
           </li>
         </ul>

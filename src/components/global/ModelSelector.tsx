@@ -11,7 +11,7 @@ interface ModelSelectorProps {
   
     return (
       <div className="mb-4">
-        <h2 className="text-xl font-bold mb-2">Select or upload a model</h2>
+        <h2 className="text-xl text-black font-bold mb-2">Select or upload a model</h2>
         <select 
           value={selectedModel} 
           onChange={(e) => setSelectedModel(e.target.value)}
@@ -23,7 +23,7 @@ interface ModelSelectorProps {
         </select>
         <p>You selected: {selectedModel} Model</p>
   
-        <h2 className="text-xl font-bold mb-2">Select a task</h2>
+        <h2 className="text-xl text-black font-bold mb-2">Select a task</h2>
         <select 
           value={selectedTask} 
           onChange={(e) => setSelectedTask(e.target.value)}
@@ -33,7 +33,7 @@ interface ModelSelectorProps {
             <option key={task} value={task}>{task}</option>
           ))}
         </select>
-        <p>You selected: {selectedTask} mode</p>
+        <p className="text-black">You selected: {selectedTask} mode</p>
       </div>
     );
   }

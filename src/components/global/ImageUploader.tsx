@@ -1,24 +1,40 @@
 import React, { useState } from 'react';
 
 interface ImageUploadProps {
-  onImageUpload: (file: File) => void;
+  onImageUpload: (files: File[]) => void;
 }
 
 const ImageUpload: React.FC<ImageUploadProps> = ({ onImageUpload }) => {
-  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.files && event.target.files.length > 0) {
-      setSelectedFile(event.target.files[0]);
-      onImageUpload(event.target.files[0]);
+      const filesArray = Array.from(event.target.files);
+      setSelectedFiles(filesArray);
+      onImageUpload(filesArray);
     }
   };
 
   return (
     <div className="mb-4">
-      <h2 className="text-xl font-bold mb-2">Upload an image</h2>
-      <input type="file" accept="image/*" onChange={handleFileChange} className="mb-2 p-2 border rounded" />
-      {selectedFile && <p>Selected file: {selectedFile.name}</p>}
+      <h2 className="text-xl text-black font-bold mb-2">Upload images</h2>
+      <input 
+        type="file" 
+        accept="image/*" 
+        multiple 
+        onChange={handleFileChange} 
+        className="mb-2 p-2 text-black border rounded" 
+      />
+      {selectedFiles.length > 0 && (
+        <div>
+          <h3>Selected files:</h3>
+          <ul>
+            {selectedFiles.map((file, index) => (
+              <li key={index}>{file.name}</li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 };
