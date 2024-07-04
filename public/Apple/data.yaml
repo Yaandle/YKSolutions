@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['Apple']
+
+roboflow:
+  workspace: yandle
+  project: apple-p9pvl
+  version: 3
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/yandle/apple-p9pvl/dataset/3
