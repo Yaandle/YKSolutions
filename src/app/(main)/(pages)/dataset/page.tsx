@@ -1,4 +1,4 @@
-// "use client" // Note: This is not a standard JavaScript or TypeScript syntax, so it might not be necessary here
+"use client"
 
 import React from "react";
 import { AnimatedTabs } from "@/components/AnimatedTabs";

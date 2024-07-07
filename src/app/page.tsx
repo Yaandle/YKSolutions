@@ -8,8 +8,8 @@ import { FlipWords } from "../components/ui/flip-words";
 import { BackgroundBeams } from "../components/ui/background-beams"; // Import BackgroundBeams directly
 
 const Page = () => {
-    const words = ["Software", "Agency", "Workflow", "Business", "Manufacturing",];
-    const colors = ['text-blue-500', 'text-green-500', 'text-purple-500', 'text-yellow-500','text-red-500'];
+    const words = ["Software", "Agency", "Workflow", "Business", "Manufacturing"];
+    const colors = ['text-blue-500', 'text-green-500', 'text-purple-500', 'text-yellow-500', 'text-red-500'];
     
     return (
         <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -38,26 +38,39 @@ const Page = () => {
                              We automate workflow through robotics, and we review, optimize, and enhance software 
                              to ensure your business operates at its peak efficiency.
                             </p>
-                            <input
-                                type="text"
-                                placeholder="Enter an Email."
-                                className="rounded-lg border border-neutral-800 focus:ring-2 focus:ring-teal-500 w-full relative z-10 mt-4 bg-neutral-950 placeholder:text-neutral-700"
-                            />
-                            <input
-                                type="text"
-                                placeholder="Enter a Name."
-                                className="rounded-lg border border-neutral-800 focus:ring-2 focus:ring-teal-500 w-full relative z-10 mt-4 bg-neutral-950 placeholder:text-neutral-700"
-                            />
-                            <input
-                                type="text"
-                                placeholder="Enter a Company."
-                                className="rounded-lg border border-neutral-800 focus:ring-2 focus:ring-teal-500 w-full relative z-10 mt-4 bg-neutral-950 placeholder:text-neutral-700"
-                            />
-                            <input
-                                type="text"
-                                placeholder="Enter a Message."
-                                className="rounded-lg border border-neutral-800 focus:ring-2 focus:ring-teal-500 w-full relative z-10 mt-4 bg-neutral-950 placeholder:text-neutral-700"
-                            />
+                            <form action="https://formsubmit.co/mindofyk@gmail.com" method="POST" className="relative z-10 mt-8 max-w-4xl mx-auto">
+                                <input
+                                    type="text"
+                                    name="name"
+                                    placeholder="Enter your Name"
+                                    required
+                                    className="rounded-lg border border-neutral-800 focus:ring-2 focus:ring-teal-500 w-full bg-neutral-950 placeholder:text-neutral-700 mt-4"
+                                />
+                                <input
+                                    type="email"
+                                    name="email"
+                                    placeholder="Enter your Email"
+                                    required
+                                    className="rounded-lg border border-neutral-800 focus:ring-2 focus:ring-teal-500 w-full bg-neutral-950 placeholder:text-neutral-700 mt-4"
+                                />
+                                <input
+                                    type="text"
+                                    name="company"
+                                    placeholder="Enter your Company"
+                                    className="rounded-lg border border-neutral-800 focus:ring-2 focus:ring-teal-500 w-full bg-neutral-950 placeholder:text-neutral-700 mt-4"
+                                />
+                                <textarea
+                                    name="message"
+                                    placeholder="Enter your Message"
+                                    className="rounded-lg border border-neutral-800 focus:ring-2 focus:ring-teal-500 w-full bg-neutral-950 placeholder:text-neutral-700 mt-4 h-32"
+                                ></textarea>
+                                <button
+                                    type="submit"
+                                    className="mt-4 px-4 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600 focus:outline-none"
+                                >
+                                    Send
+                                </button>
+                            </form>
                         </div>
                         <BackgroundBeams />
                     </div>

@@ -19,8 +19,14 @@ export function AnimatedTabs() {
   ];
 
   return (
-    <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full items-start justify-start my-40">
-      <Tabs tabs={tabs} />
+    <div className="min-h-[60vh] h-full md:h-full [perspective:1000px] relative flex flex-col max-w-5xl mx-auto w-full items-start justify-start my-20"> {/* Adjusted the margin */}
+      <Tabs
+        tabs={tabs}
+        containerClassName="bg-black"
+        activeTabClassName="text-black"
+        tabClassName="text-white"
+        contentClassName="bg-black"
+      />
     </div>
   );
 }

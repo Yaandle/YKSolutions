@@ -52,7 +52,13 @@ export const Tabs = ({
             }}
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}
-            className={cn("relative px-4 py-2 rounded-full", tabClassName)}
+            className={cn(
+              "relative px-4 py-2 rounded-full text-white",
+              tabClassName,
+              {
+                "bg-black text-white": active.value !== tab.value,
+              }
+            )}
             style={{
               transformStyle: "preserve-3d",
             }}
@@ -68,9 +74,7 @@ export const Tabs = ({
               />
             )}
 
-            <span className="relative block text-black dark:text-white">
-              {tab.title}
-            </span>
+            <span className="relative block">{tab.title}</span>
           </button>
         ))}
       </div>
@@ -88,6 +92,7 @@ export const Tabs = ({
 export const FadeInDiv = ({
   className,
   tabs,
+  active,
   hovering,
 }: {
   className?: string;
@@ -100,7 +105,7 @@ export const FadeInDiv = ({
     return tab.value === tabs[0].value;
   };
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-full h-full min-h-[600vh]"> {/* Adjusted the height */}
       {tabs.map((tab, idx) => (
         <motion.div
           key={tab.value}
@@ -114,7 +119,7 @@ export const FadeInDiv = ({
           animate={{
             y: isActive(tab) ? [0, 40, 0] : 0,
           }}
-          className={cn("w-full h-full absolute top-0 left-0", className)}
+          className={cn("w-full h-full absolute top-0 left-0 bg-black", className)}
         >
           {tab.content}
         </motion.div>
