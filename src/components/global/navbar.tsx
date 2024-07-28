@@ -22,16 +22,6 @@ const Navbar = (props: Props) => {
               <a>Pricing</a>
             </Link>
           </li>
-          <li>
-            <Link href="dataset" legacyBehavior>
-              <a>Resources</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="MFIT" legacyBehavior>
-              <a>MFIT</a>
-            </Link>
-          </li>
         </ul>
       </nav>
       <aside className="flex items-center gap-4">

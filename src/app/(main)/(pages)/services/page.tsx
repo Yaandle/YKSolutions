@@ -1,86 +1,92 @@
 import React from 'react';
 import Image from 'next/image';
 import Navbar from '@/components/global/navbar';
+import { TracingBeam } from "@/components/ui/tracing-beam";
 
 const ServicesPage = () => {
   return (
-    <>
+    <div className="bg-black-100 min-h-screen">
       <Navbar />
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl text-white font-bold mb-8 text-center">Our Services</h1>
+      <TracingBeam className="pt-20">
+        <div className="container mx-auto px-4 py-12">
+          <h1 className="text-5xl font-bold mb-12 text-center text-white-800">Our Innovative Services</h1>
 
-        <section className="mb-12">
-          <h2 className="text-3xl font-semibold mb-4 text-black">Robotic Automation</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-xl text-black font-semibold mb-2">Advanced Robots</h3>
-              <p className="text-black"> Our robotic automation solutions feature advanced, industry-leading robots designed to automate a wide range of industrial processes with precision and efficiency.</p>
+          <section className="mb-16">
+            <h2 className="text-3xl font-semibold mb-6 text-white-700">Robotic Automation Solutions</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                { title: "Advanced Robots", description: "Cutting-edge robots designed to automate complex industrial processes with unparalleled precision and efficiency." },
+                { title: "Flexible Integration", description: "Seamlessly integrate our robots into your existing operations, ensuring minimal disruption and maximum productivity gains." },
+                { title: "Customizable Deployment", description: "Choose between leasing or purchasing options, tailoring the deployment to your business needs and financial strategy." },
+                { title: "Industry-Specific Solutions", description: "Robots optimized for various industries including manufacturing, logistics, healthcare, and more." },
+                { title: "Collaborative Robots", description: "Cobots designed to work alongside humans, enhancing safety and efficiency in shared workspaces." },
+                { title: "AI-Powered Automation", description: "Leverage artificial intelligence to create smart, adaptive robotic systems that learn and improve over time." }
+              ].map((item, index) => (
+                <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                  <h3 className="text-xl font-semibold mb-3 text-gray-800">{item.title}</h3>
+                  <p className="text-gray-600">{item.description}</p>
+                </div>
+              ))}
             </div>
-            <div className="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-xl text-black font-semibold mb-2">Flexible Integration</h3>
-              <p className="text-black"> These robots are highly flexible and easy to integrate into your existing operations, ensuring a seamless transition and maximum impact on your productivity.</p>
-            </div>
-            <div className="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-xl text-black font-semibold mb-2">Leasing or Purchasing</h3>
-              <p className="text-black"> Businesses have the option to either lease or purchase our robotic automation solutions, allowing for flexibility in deployment and capital investment.</p>
-            </div>
-          </div>
-        </section>
+          </section>
 
-        <section className="mb-12">
-          <h2 className="text-3xl font-semibold mb-4 text-black">Software Automation</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-xl text-black font-semibold mb-2">Comprehensive Review</h3>
-              <p className="text-black"> Our team of experts will conduct a thorough review of your existing business software, identifying areas for improvement and optimization.</p>
+          <section className="mb-16">
+            <h2 className="text-3xl font-semibold mb-6 text-white-700">Advanced Software Automation</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                { title: "Comprehensive System Analysis", description: "Our experts conduct an in-depth review of your existing software ecosystem, identifying optimization opportunities." },
+                { title: "Tailored Software Development", description: "We create bespoke software solutions that seamlessly integrate with your operations, driving efficiency and innovation." },
+                { title: "Process Automation", description: "Streamline your workflows with intelligent process automation, reducing manual tasks and boosting productivity." },
+                { title: "Data Integration & Analytics", description: "Unify your data sources and gain actionable insights with our advanced analytics solutions." },
+                { title: "Cloud Migration & Optimization", description: "Modernize your infrastructure with our cloud migration services, optimizing for performance and scalability." },
+                { title: "Cybersecurity Enhancement", description: "Fortify your digital assets with state-of-the-art security measures integrated into your automated systems." }
+              ].map((item, index) => (
+                <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                  <h3 className="text-xl font-semibold mb-3 text-gray-800">{item.title}</h3>
+                  <p className="text-gray-600">{item.description}</p>
+                </div>
+              ))}
             </div>
-            <div className="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-xl text-black font-semibold mb-2">Custom Development</h3>
-              <p className="text-black"> We will develop custom software solutions tailored to your unique needs, ensuring seamless integration with your operations and maximizing efficiency.</p>
-            </div>
-            <div className="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-xl text-black font-semibold mb-2">Integrated Approach</h3>
-              <p className="text-black"> By combining our software automation expertise with our robotic automation solutions, we provide a comprehensive and integrated approach to streamlining your workflows.</p>
-            </div>
-          </div>
-        </section>
+          </section>
 
-        <section className="mb-12">
-          <h2 className="text-3xl font-semibold mb-4 text-black">Our Comprehensive Approach</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { title: "Client Assessment", description: "We start by conducting a thorough analysis of your current processes and identifying areas for improvement, ensuring our solutions address your unique challenges." },
-              { title: "Solution Design", description: "Our experts collaborate with you to develop customized automation solutions that align with your business objectives and deliver tangible results." },
-              { title: "Seamless Implementation", description: "We ensure a smooth integration of our robotic and software automation solutions into your workflows, minimizing disruption and maximizing the impact on your operations." },
-              { title: "Ongoing Support", description: "Our commitment to your success extends beyond the initial implementation, as we provide continuous assistance, maintenance, and optimization to ensure maximum efficiency and return on investment." }
-            ].map((step, index) => (
-              <div key={index} className="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-xl text-black font-semibold mb-2">{index + 1}. {step.title}</h3>
-                <p className="text-black">{step.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
+          <section className="mb-16">
+            <h2 className="text-3xl font-semibold mb-6 text-white-700">Our Comprehensive Approach</h2>
+            <div className="space-y-6">
+              {[
+                { title: "In-Depth Discovery", description: "We begin with a thorough analysis of your current processes, challenges, and objectives, ensuring our solutions are perfectly aligned with your needs." },
+                { title: "Strategic Solution Design", description: "Our team of experts collaborates with you to craft customized automation strategies that drive tangible results and support your long-term goals." },
+                { title: "Seamless Implementation", description: "We manage the entire implementation process, ensuring smooth integration of both robotic and software automation solutions with minimal disruption to your operations." },
+                { title: "Continuous Optimization", description: "Our commitment extends beyond initial deployment. We provide ongoing support, maintenance, and optimization to maximize your ROI and adapt to evolving business needs." }
+              ].map((step, index) => (
+                <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                  <h3 className="text-xl font-semibold mb-3 text-gray-800">{index + 1}. {step.title}</h3>
+                  <p className="text-gray-600">{step.description}</p>
+                </div>
+              ))}
+            </div>
+          </section>
 
-        <section>
-          <h2 className="text-3xl font-semibold mb-4 text-black">Benefits of Automation</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-xl text-black font-semibold mb-2">Save Time</h3>
-              <p className="text-black">Our automation solutions streamline repetitive tasks, freeing up your employees to focus on more strategic and value-added activities.</p>
+          <section>
+            <h2 className="text-3xl font-semibold mb-6 text-white-700">The Impact of Our Automation Services</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                { title: "Dramatic Time Savings", description: "Our automation solutions significantly reduce time spent on repetitive tasks, allowing your team to focus on strategic initiatives and innovation." },
+                { title: "Substantial Cost Reduction", description: "By optimizing operations and minimizing errors, our services lead to considerable cost savings across your organization." },
+                { title: "Enhanced Productivity", description: "Streamlined workflows and increased accuracy result in a substantial boost to overall productivity and operational efficiency." },
+                { title: "Improved Quality Control", description: "Automation ensures consistent quality in your products or services, reducing variations and enhancing customer satisfaction." },
+                { title: "Scalability and Flexibility", description: "Our solutions are designed to grow with your business, easily adapting to changing demands and market conditions." },
+                { title: "Data-Driven Insights", description: "Leverage the power of automation to gather and analyze data, driving informed decision-making across your organization." }
+              ].map((item, index) => (
+                <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                  <h3 className="text-xl font-semibold mb-3 text-gray-800">{item.title}</h3>
+                  <p className="text-gray-600">{item.description}</p>
+                </div>
+              ))}
             </div>
-            <div className="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-xl text-black font-semibold mb-2">Reduce Costs</h3>
-              <p className="text-black">By enhancing operational efficiency and minimizing errors, our solutions help you achieve significant cost savings for your business.</p>
-            </div>
-            <div className="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-xl text-black font-semibold mb-2">Increase Productivity</h3>
-              <p className="text-black">With improved workflows and increased accuracy, your team can accomplish more in less time, boosting overall productivity and performance.</p>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
+          </section>
+        </div>
+      </TracingBeam>
+    </div>
   );
 };
 

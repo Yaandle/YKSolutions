@@ -22,8 +22,8 @@
 
 @layer base {
   :root {
-    --background: 0 0% 0%; /* Changed to black */
-    --foreground: 0 0% 100%; /* Changed to white for contrast */
+    --background: 0 0% 0%; /* Black background */
+    --foreground: 0 0% 100%; /* White foreground for contrast */
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
@@ -45,8 +45,8 @@
   }
 
   .dark {
-    --background: 0 0% 0%; /* Changed to black for dark mode */
-    --foreground: 0 0% 100%; /* Changed to white for contrast */
+    --background: 0 0% 0%; /* Black background for dark mode */
+    --foreground: 0 0% 100%; /* White foreground for contrast */
     --card: 0 0% 3.9%;
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 3.9%;
@@ -65,15 +65,9 @@
     --input: 0 0% 14.9%;
     --ring: 0 0% 83.1%;
   }
-}
-
-@layer base {
-  :root {
-    @apply border-none; /* Apply a consistent border style to all elements */
-  }
 
   body {
-    @apply bg-black text-white dark:bg-white dark:text-black; /* Use standard Tailwind utilities */
+    @apply bg-black text-white dark:bg-black dark:text-white;
   }
 
   .header {
@@ -86,7 +80,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #333;
+    background-color: #000; /* Black navbar */
     color: #fff;
     padding: 10px 20px;
     z-index: 1000;
@@ -116,5 +110,30 @@
 
   .space-y-4 > * + * {
     margin-top: 1rem;
+  }
+
+  /* Additional Styles for Vibrant Colors */
+  .text-primary {
+    color: #00ff00; /* Bright green */
+  }
+
+  .text-secondary {
+    color: #ff00ff; /* Bright magenta */
+  }
+
+  .text-accent {
+    color: #00ffff; /* Bright cyan */
+  }
+
+  .bg-primary {
+    background-color: #00ff00; /* Bright green */
+  }
+
+  .bg-secondary {
+    background-color: #ff00ff; /* Bright magenta */
+  }
+
+  .bg-accent {
+    background-color: #00ffff; /* Bright cyan */
   }
 }
