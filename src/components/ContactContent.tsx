@@ -50,10 +50,7 @@ const ContactPage = () => {
                     </form>
                 </div>
 
-                <div className="mt-12 text-center">
-                    <h2 className="text-2xl font-semibold mb-4">Other Ways to Reach Us</h2>
-                    <p className="text-neutral-400">Email: mindofyk@gmail.com</p>
-                </div>
+
             </div>
             <BackgroundBeams />
         </div>
