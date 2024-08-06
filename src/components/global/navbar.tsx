@@ -24,11 +24,6 @@ const Navbar = (props: Props) => {
               <a className="hover:text-gray-300 transition-colors">Pricing</a>
             </Link>
           </li>
-          <li>
-            <Link href="/about" legacyBehavior>
-              <a className="hover:text-gray-300 transition-colors">About</a>
-            </Link>
-          </li>
         </ul>
       </nav>
       <aside className="flex items-center gap-4">
