@@ -31,18 +31,7 @@ export const FlipWords = ({
 
   return (
     <div className="relative inline-block">
-      {words.map((word, index) => (
-        <span
-          key={word}
-          className={cn(
-            "invisible inline-block",
-            colors[index % colors.length]
-          )}
-          aria-hidden="true"
-        >
-          {word}
-        </span>
-      ))}
+      <span className="invisible">{words[0]}</span>
       <AnimatePresence mode="wait">
         <motion.span
           key={words[currentWordIndex]}
@@ -51,7 +40,7 @@ export const FlipWords = ({
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.5 }}
           className={cn(
-            "absolute top-0 left-0 text-left",
+            "absolute top-0 left-0",
             className,
             colors[currentWordIndex % colors.length]
           )}

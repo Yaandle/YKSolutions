@@ -1,7 +1,10 @@
+import React from 'react';
+import { BackgroundBeams } from "../components/ui/background-beams";
+
 const AboutPage = () => {
     return (
         <div className="min-h-screen bg-neutral-950 text-white py-16">
-            <div className="container mx-auto px-4 relative z-10">
+            <div className="container mx-auto px-4 relative z-10 w-full">
                 <h1 className="text-5xl md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-sans font-bold mb-12">
                     About Us
                 </h1>
@@ -24,6 +27,7 @@ const AboutPage = () => {
                     </p>
                 </div>
             </div>
+            <BackgroundBeams />
         </div>
     );
 };

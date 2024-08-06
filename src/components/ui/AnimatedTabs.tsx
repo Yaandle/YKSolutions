@@ -42,7 +42,7 @@ export const Tabs = ({
     <>
       <div
         className={cn(
-          "flex flex-row items-center justify-start [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full",
+          "flex flex-row items-center justify-center [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full mb-16",
           containerClassName
         )}
       >
@@ -55,9 +55,9 @@ export const Tabs = ({
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}
             className={cn(
-              "relative px-4 py-2 rounded-full bg-gray-700 text-white", // Add default bg color and text color
+              "relative px-8 py-3 mx-2 rounded-full bg-gray-800 text-white transition-all duration-300 hover:bg-gray-700",
               tabClassName,
-              active.value === tab.value ? activeTabClassName : "text-gray-400" // Add class for inactive text color
+              active.value === tab.value ? activeTabClassName : "text-gray-400"
             )}
             style={{
               transformStyle: "preserve-3d",
@@ -68,15 +68,12 @@ export const Tabs = ({
                 layoutId="clickedbutton"
                 transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
                 className={cn(
-                  "absolute inset-0 bg-gray-200 dark:bg-zinc-800 rounded-full",
+                  "absolute inset-0 bg-gray-700 rounded-full",
                   activeTabClassName
                 )}
               />
             )}
-
-            <span className="relative block">
-              {tab.title}
-            </span>
+            <span className="relative block">{tab.title}</span>
           </button>
         ))}
       </div>
@@ -85,7 +82,7 @@ export const Tabs = ({
         active={active}
         key={active.value}
         hovering={hovering}
-        className={cn("mt-32", contentClassName)}
+        className={cn("mt-8", contentClassName)}
       />
     </>
   );
@@ -144,13 +141,13 @@ export function AnimatedTabs() {
   ];
 
   return (
-    <div className="w-full mx-auto my-12">
+    <div className="w-full mx-auto">
       <Tabs
         tabs={tabs}
-        containerClassName="bg-black mb-8"
-        activeTabClassName="text-black"
-        tabClassName="text-white px-8 py-4 text-lg"
-        contentClassName="bg-black w-full"
+        containerClassName="bg-transparent"
+        activeTabClassName="text-white"
+        tabClassName="text-gray-400 text-lg"
+        contentClassName="bg-transparent w-full"
       />
     </div>
   );
