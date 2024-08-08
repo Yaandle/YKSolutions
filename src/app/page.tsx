@@ -7,7 +7,7 @@ import Navbar from "@/components/global/navbar";
 
 const Page = () => {
   const words = ["Software", "Agency", "Workflow", "Business", "Manufacturing"];
-  const colors = ['text-purple-500', 'text-purple-500', 'text-purple-500', 'text-purple-500', 'text-purple-500'];
+  const colors = ['text-blue-500', 'text-green-500', 'text-purple-500', 'text-yellow-500', 'text-red-500'];
 
   const [visibleCards, setVisibleCards] = useState<number[]>([]);
 
@@ -34,8 +34,8 @@ const Page = () => {
     <main className="flex min-h-screen flex-col bg-black text-white relative overflow-hidden">
       <Navbar />
       <div className="flex-grow flex flex-col justify-center items-center px-4 pt-24 pb-48">
-        <div className="text-center mb-48">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-light tracking-tight">
+        <div className="h-[40rem] flex justify-center items-center px-4">
+          <h1 className="text-5xl mx-auto font-normal text-neutral-600 dark:text-neutral-400">
             <span className="text-gray-400">Automate Your </span>
             <FlipWords words={words} colors={colors} duration={2000} className="text-purple-500" />
             <br />

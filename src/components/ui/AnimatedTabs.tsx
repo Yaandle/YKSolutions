@@ -102,7 +102,7 @@ export const FadeInDiv = ({
   };
 
   return (
-    <div className="relative w-full h-[400px]"> {/* Adjusted height */}
+    <div className="relative w-full h-[800px]"> {/* Adjusted height */}
       {tabs.map((tab, idx) => (
         <motion.div
           key={tab.value}
