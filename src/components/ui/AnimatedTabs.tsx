@@ -49,13 +49,11 @@ export const Tabs = ({
         {propTabs.map((tab, idx) => (
           <button
             key={tab.title}
-            onClick={() => {
-              moveSelectedTabToTop(idx);
-            }}
+            onClick={() => moveSelectedTabToTop(idx)}
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}
             className={cn(
-              "relative px-8 py-3 mx-2 rounded-full bg-gray-800 text-white transition-all duration-300 hover:bg-gray-700",
+              "relative px-10 py-4 mx-2 rounded-full bg-gray-800 text-white transition-all duration-300 hover:bg-gray-700", // Increased padding
               tabClassName,
               active.value === tab.value ? activeTabClassName : "text-gray-400"
             )}
@@ -102,8 +100,9 @@ export const FadeInDiv = ({
   const isActive = (tab: Tab) => {
     return tab.value === tabs[0].value;
   };
+
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-full h-[400px]"> {/* Adjusted height */}
       {tabs.map((tab, idx) => (
         <motion.div
           key={tab.value}
@@ -117,7 +116,7 @@ export const FadeInDiv = ({
           animate={{
             y: isActive(tab) ? [0, 40, 0] : 0,
           }}
-          className={cn("w-full h-full absolute top-0 left-0", className)}
+          className={cn("w-[120%] h-full absolute top-0 left-0", className)}
         >
           {tab.content}
         </motion.div>
